@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+
+// importing MUI components
+import { createTheme } from "@mui/material/styles";
+
+
+//importing components
+import Header from "./components/header.js";
+import Banner from "./components/banner"
+import MuhammadDanish from "./components/muhammadDanish"
+import { Typography } from "@mui/material";
+
+
+
+// Custom theme
+export const theme = createTheme({
+  palette: {
+    primary: {
+      light : "#fff",
+      main: '#5bbc2f',
+      dark: "#f3f3f3",
+      contrastText: "#161c20",
+              dark: "#444 "
+    },
+    background: {
+      light : "#fff",
+      main: '#5bbc2f',
+      dark: "#f3f3f3",
+      contrastText: "#161c20",
+    },
+    color: {
+      primary: {
+        light: "#fff",
+        main: "#222",
+        dark: "#444 "
+      }
+    },
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <div className="App">
+          <Header />
+          <Banner />
+          <MuhammadDanish />
+        </div>
   );
 }
 
