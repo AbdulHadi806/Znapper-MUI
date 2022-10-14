@@ -8,8 +8,7 @@ import { createTheme } from "@mui/material/styles";
 import Header from "./components/header.js";
 import Banner from "./components/banner"
 import MuhammadDanish from "./components/muhammadDanish"
-import { Typography } from "@mui/material";
-
+import OtherZnappers from './components/otherZnappers'
 
 
 // Custom theme
@@ -44,6 +43,7 @@ function App() {
           <Header />
           <Banner />
           <MuhammadDanish />
+          <OtherZnappers />
         </div>
   );
 }

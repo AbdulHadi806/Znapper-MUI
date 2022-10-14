@@ -1,26 +1,25 @@
 import React from "react";
 
-//importing MUI components
+//importing MUI component
 import {
-  Link,
   Container,
   Typography,
   useTheme,
   Button,
   Box,
+  MenuItem,
 } from "@mui/material";
 import TextField from "@mui/material/TextField";
-import { maxWidth } from "@mui/system";
 
 export default function MuhammadDanish() {
-  const theme = useTheme();
+
   const arr = ["Graphic Design", " Web Design", " Logo Design"];
   const inputArr = ["First name", "Last name", "Email address", "Phone Number"];
   return (
     <>
-    <Container maxWidth = 'lg'>
+    <Container sx = {{pt: 6, pb: 5}} maxWidth = 'xl'>
       <Box
-        xs={{
+        sx={{
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "space-between",
@@ -33,7 +32,14 @@ export default function MuhammadDanish() {
           >
             Muhammad Danish
           </Typography>
-          <Typography md={{ display: "block", maxWidth: "md", mt: 7 }}>
+          {arr.map((val) => {
+            return (
+              <MenuItem key = {Math.random()} sx={{ display: "inline", fontSize: "small", color: "primary.dark", pr:1 }}>
+                {val}
+              </MenuItem>
+            );
+          })}
+          <Typography sx={{ display: "block", width: 900, my: 3 }}>
             Jarad helped found Mostly Serious after cutting his teeth at
             boutique firms, startups, and as an interactive consultant for some
             of the largest agencies in the US. His original vision for Mos tly
@@ -41,13 +47,6 @@ export default function MuhammadDanish() {
             met deadlines, was easy to work with, earned consistent results for
             clients, and could tackle amost any project. image.png
           </Typography>
-          {arr.map((val) => {
-            return (
-              <Link sx={{ fontSize: "small", color: "primary.dark" }}>
-                {val}
-              </Link>
-            );
-          })}
         </Box>
         <Box
           sx={{
@@ -60,7 +59,7 @@ export default function MuhammadDanish() {
         >
           {inputArr.map((val) => {
             return (
-              <TextField
+              <TextField key = {Math.random()}
                 label={val}
                 id="margin-normal"
                 margin="normal"
@@ -68,7 +67,7 @@ export default function MuhammadDanish() {
               />
             );
           })}
-          <Button variant="contained">Contained</Button>
+          <Button variant="contained" sx = {{color: 'primary.light'}}>Contained</Button>
         </Box>
       </Box>
       </Container>

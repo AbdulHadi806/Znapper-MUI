@@ -1,7 +1,7 @@
 import React from "react";
 
 // MUI
-import { AppBar, Toolbar, Typography, useTheme,Box, Button } from "@mui/material";
+import { useTheme,Box } from "@mui/material";
 
 export default function Banner() {
   const theme = useTheme();
